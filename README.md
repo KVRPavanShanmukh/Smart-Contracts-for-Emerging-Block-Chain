@@ -1,61 +1,16 @@
-# Smart-Contracts-for-Emerging-Block-Chain
-This repository completely consists of our teamwork and development of our project.
-# 🚀 Full Stack Smart Contracts Application (Blockchain)
+# React + Vite
 
-## 📌 Project Overview
-This repository contains a **full-stack decentralized application (DApp)** focused on **building, deploying, and interacting with smart contracts using blockchain technology**.  
-The project demonstrates how modern web applications can seamlessly integrate with blockchain networks to provide **secure, transparent, and trustless systems**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Our goal is to design an end-to-end solution that connects:
-- Smart Contracts (Blockchain Layer)
-- Backend Services
-- Frontend User Interface
-- Wallet Integrations
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🎯 Objectives
-- Build and deploy smart contracts securely  
-- Enable wallet-based authentication and transactions  
-- Interact with smart contracts from a modern frontend  
-- Ensure transparency, immutability, and decentralization  
-- Learn real-world blockchain + full-stack integration  
+## React Compiler
 
----
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 🧠 Key Features
-- 🔐 Smart Contract Development & Deployment  
-- 💼 Wallet Integration (MetaMask, etc.)  
-- 🔄 Read & Write operations on blockchain  
-- 🌐 Full-stack architecture (Frontend + Backend + Blockchain)  
-- 📜 Transaction tracking and contract interaction  
-- 🧪 Local blockchain testing and simulation  
+## Expanding the ESLint configuration
 
----
-
-## 🏗️ Tech Stack
-
-### 🔗 Blockchain
-- Solidity (Smart Contracts)
-- Ethereum / Local Test Network (Ganache / Hardhat)
-- Web3 / Ethers.js
-
-### 🧠 Backend
-- Node.js
-- Express.js
-- Blockchain interaction APIs
-
-### 🎨 Frontend
-- React.js
-- Web3-enabled UI
-- Wallet connection support
-
-### 🗄️ Tools & Utilities
-- MetaMask
-- Hardhat / Truffle
-- Ganache
-- Git & GitHub
-
----
-
-## 📁 Project Structure
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
