@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
-import bgVideo from "./assets/videos/bg.mp4";
+import bgVideo from "./assets/bgVideo.mp4";
 import "./styles/App.css";
 
 function App() {
