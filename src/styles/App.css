@@ -14,6 +14,14 @@
   }
 }
 
+.app {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: black;
+  color: white;
+}
+
 .bg-video {
   position: fixed !important;
   top: 0 !important;
@@ -172,6 +180,7 @@
     min-width: 120px;
   }
 }
+
 
 /* Background Video */
 .bg-video {

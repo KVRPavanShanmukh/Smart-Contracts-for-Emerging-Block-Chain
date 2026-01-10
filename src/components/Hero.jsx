@@ -1,29 +1,36 @@
 import "../styles/App.css";
 
-function App() {
+function Hero() {
   return (
-    <>
-      {/* Background Video */}
-      <video
-        className="bg-video"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={bgVideo} type="video/mp4" />
-      </video>
-
-      {/* Dark Overlay */}
-      <div className="video-overlay"></div>
-
-      {/* App Content */}
-      <div className="app">
-        <NavBar />
-        <Hero />
+    <section className="hero">
+      <div className="hero-content">
+        <h1 className="hero-title">
+          Blockchain Micro-Payments<span className="gradient-text"> CRYPLET</span>
+        </h1>
+        <p className="hero-subtitle">Secure • Decentralized • Lightning Fast</p>
+        <div className="hero-stats">
+          <div>
+            <span>10M+</span>
+            Transactions
+          </div>
+          <div>
+            <span>0.001s</span>
+            Speed
+          </div>
+          <div>
+            <span>99.99%</span>
+            Uptime
+          </div>
+        </div>
+        <div className="buttons">
+          <button className="btn primary">Launch DApp</button>
+          <button className="btn secondary">Whitepaper</button>
+        </div>
       </div>
-    </>
+      <div className="scroll-indicator">↓</div>
+    </section>
   );
 }
 
-export default App;
+export default Hero;
+
