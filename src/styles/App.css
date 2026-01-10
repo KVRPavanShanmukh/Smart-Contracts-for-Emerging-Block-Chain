@@ -1,0 +1,213 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: black;
+    color: white;
+    overflow-x: hidden;
+  }
+}
+
+.bg-video {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  object-fit: cover !important;
+  z-index: -2 !important;
+}
+
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.navbar {
+  @apply flex justify-between items-center px-4 md:px-8 py-4 md:py-6 backdrop-blur-md bg-black/40 border-b border-cyan-500/30;
+}
+
+.logo-container {
+  @apply flex items-center gap-2 md:gap-3;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.brand {
+  @apply text-xl md:text-2xl font-black tracking-wide bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent;
+}
+
+.nav-links {
+  @apply hidden md:flex gap-6 lg:gap-8 list-none m-0 p-0;
+}
+
+.nav-links li {
+  @apply cursor-pointer text-white/90 hover:text-cyan-400 transition-all duration-300 font-medium text-sm lg:text-base hover:scale-105;
+}
+
+.wallet-btn {
+  @apply hidden sm:block px-4 py-2 md:px-6 md:py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-black rounded-full font-semibold text-sm md:text-base hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50;
+}
+
+.hero {
+  @apply h-screen flex flex-col justify-center items-center text-center px-4 md:px-8 pt-16 md:pt-20;
+}
+
+.hero-content {
+  @apply max-w-4xl w-full;
+}
+
+.hero-title {
+  @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 tracking-tight leading-tight bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent;
+}
+
+.hero-subtitle {
+  @apply text-lg md:text-xl lg:text-2xl opacity-90 mb-8 md:mb-12 font-light max-w-2xl mx-auto;
+}
+
+.hero-stats {
+  @apply flex flex-col sm:flex-row justify-center gap-6 md:gap-12 mb-8 md:mb-12 flex-wrap;
+}
+
+.hero-stats > div {
+  @apply text-center p-4 bg-black/40 backdrop-blur-sm rounded-xl border border-cyan-500/30 min-w-[100px] hover:scale-105 transition-transform duration-300;
+}
+
+.hero-stats span {
+  @apply block text-2xl md:text-3xl font-black text-cyan-400;
+}
+
+.buttons {
+  @apply flex flex-col sm:flex-row gap-3 md:gap-4 justify-center;
+}
+
+.btn {
+  @apply px-6 py-3 md:px-8 md:py-4 rounded-full font-semibold text-base md:text-lg transition-all duration-300 shadow-xl min-w-[140px] active:scale-[0.97];
+}
+
+.primary {
+  @apply bg-gradient-to-r from-cyan-500 to-blue-500 text-black hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50;
+}
+
+.secondary {
+  @apply border-2 border-cyan-500 bg-transparent/50 backdrop-blur-sm text-white hover:bg-cyan-500/20 hover:border-cyan-400 hover:scale-105;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: #00f6ff;
+  animation: scrollBounce 2s infinite;
+}
+
+/* Pure CSS Animations */
+@keyframes logoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px #00f6ff);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #00f6ff);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  .hero-stats {
+    gap: 1rem;
+  }
+  .scroll-indicator {
+    bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  .hero-stats span {
+    font-size: 1.5rem;
+  }
+  .btn {
+    min-width: 120px;
+  }
+}
+
+/* Background Video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+
+
+
+/* Background Video */
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -10;
+}
+
+/* Dark overlay above video */
+.video-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -5;
+}
+
+/* App content above everything */
+.app {
+  position: relative;
+  z-index: 1;
+}
